@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,6 @@ Route::group([
     'middleware' => 'web',
     'prefix' => 'admin',
 ], function(){
-    Route::get('/', function() {
-        
-    });
+    Route::get('/', [AdminController::class, 'index'] );
+    Route::get('/app2', [AdminController::class, 'app2'] );
 });
