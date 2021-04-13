@@ -15,6 +15,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
+    dd('hello');
 });
 
 
