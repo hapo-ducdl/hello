@@ -23,6 +23,8 @@ Route::group([
     'middleware' => 'web',
     'prefix' => 'admin',
 ], function(){
-    Route::get('/', [AdminController::class, 'index'] );
+    Route::get('/',function () {
+        dd('admin');
+    });
     Route::get('/app2', [AdminController::class, 'app2'] );
 });
