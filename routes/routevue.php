@@ -19,12 +19,16 @@ Route::get('/', function () {
 });
 
 
-Route::group([
-    'middleware' => 'web',
-    'prefix' => 'admin',
-], function(){
-    Route::get('/',function () {
-        dd('admin');
-    });
-    Route::get('/app2', [AdminController::class, 'app2'] );
+Route::get('/admin',function () {
+    dd('admin');
 });
+
+// Route::group([
+//     'middleware' => 'web',
+//     'prefix' => 'admin',
+// ], function(){
+//     Route::get('/',function () {
+//         dd('admin');
+//     });
+//     Route::get('/app2', [AdminController::class, 'app2'] );
+// });
