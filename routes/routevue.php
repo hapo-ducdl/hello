@@ -15,20 +15,14 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    dd('vavar');
+    dd('hello');
 });
 
 
-Route::get('/hello',function () {
-    dd('admin');
+Route::group([
+    'middleware' => 'web',
+    'prefix' => 'admin',
+], function(){
+    Route::get('/', [AdminController::class, 'index'] );
+    Route::get('/app2', [AdminController::class, 'app2'] );
 });
-
-// Route::group([
-//     'middleware' => 'web',
-//     'prefix' => 'admin',
-// ], function(){
-//     Route::get('/',function () {
-//         dd('admin');
-//     });
-//     Route::get('/app2', [AdminController::class, 'app2'] );
-// });
