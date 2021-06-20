@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admin',function () {
+Route::get('/hello',function () {
     dd('admin');
 });
 
